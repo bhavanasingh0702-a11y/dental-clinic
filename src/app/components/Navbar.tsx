@@ -107,6 +107,7 @@ className="lg:hidden text-3xl text-[#0E384c]"
             <Link href="#" className="block px-4 py-3 hover:text-[#1E84B5]">
             Header Layouts
             </Link>
+            
             <Link href="#" className="block px-4 py-3 hover:text-[#1E84B5]">
             Footer Layouts
             </Link>
