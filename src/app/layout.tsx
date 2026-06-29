@@ -1,6 +1,12 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LoaderProvider from "./Loaderprovider";
+
+import Footer from "./components/Footer";
+import Cursordot from "./components/cursordot";
+// import AppointmentBanner from "./components/AppointmentBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +29,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    <Cursordot />
+    
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      
+      <body className="min-h-full flex flex-col">{children}
+        {/* <AppointmentBanner /> */}
+        <LoaderProvider>
+        <Footer />
+        </LoaderProvider>
+      </body>
     </html>
+    </>
   );
 }
+
+
